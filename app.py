@@ -14,7 +14,7 @@ st.write("Enter the details below to predict the risk of diabetes.")
 # Input fields for user
 HighBP = st.selectbox("High Blood Pressure (0 = No, 1 = Yes)", [0, 1])
 HighChol = st.selectbox("High Cholesterol (0 = No, 1 = Yes)", [0, 1]) 
-Bmi = st.number_input("Body Mass Index (BMI)", min_value=10.0, max_value=100.0, step=0.1)
+BMI = st.number_input("Body Mass Index (BMI)", min_value=10.0, max_value=100.0, step=0.1)
 Stroke = st.selectbox("Ever had a Stroke (0 = No, 1 = Yes)", [0, 1])
 HeartDiseaseorAttack = st.selectbox("Heart Disease or Attack (0 = No, 1 = Yes)", [0, 1])
 HvyAlcoholConsump = st.selectbox("Heavy Alcohol Consumption (0 = No, 1 = Yes)", [0, 1])
@@ -29,7 +29,7 @@ Income = st.selectbox("Income Scale (1 = <10K, 8 = >75K)", list(range(1, 9)))
 # Predict function
 if st.button("Predict Diabetes Risk"):
     # Prepare input data
-    input_data = pd.DataFrame([[HighBP,HighChol,Bmi,Stroke,GenHlth,MentHlth,PhysHlth,DiffWalk
+    input_data = pd.DataFrame([[HighBP,HighChol,BMI,Stroke,GenHlth,MentHlth,PhysHlth,DiffWalk
                             ,HeartDiseaseorAttack,HvyAlcoholConsump,Age,Income]],columns=['HighBP','HighChol','BMI','Stroke','GenHlth','MentHlth','PhysHlth','DiffWalk'
                             ,'HeartDiseaseorAttack','HvyAlcoholConsump','Age','Income'])
     
