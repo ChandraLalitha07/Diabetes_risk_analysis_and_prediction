@@ -29,9 +29,9 @@ Income = st.selectbox("Income Scale (1 = <10K, 8 = >75K)", list(range(1, 9)))
 # Predict function
 if st.button("Predict Diabetes Risk"):
     # Prepare input data
-    input_data = pd.DataFrame([[HighBP,HighChol,BMI,Stroke,GenHlth,MentHlth,PhysHlth,DiffWalk
-                            ,HeartDiseaseorAttack,HvyAlcoholConsump,Age,Income]],columns=['HighBP','HighChol','BMI','Stroke','GenHlth','MentHlth','PhysHlth','DiffWalk'
-                            ,'HeartDiseaseorAttack','HvyAlcoholConsump','Age','Income'])
+    input_data = pd.DataFrame([[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,HvyAlcoholConsump,GenHlth,MentHlth,PhysHlth,DiffWalk
+                             ,Age,Income]],columns=['HighBP','HighChol','BMI','Stroke','HeartDiseaseorAttack','HvyAlcoholConsump','GenHlth','MentHlth','PhysHlth','DiffWalk'
+                            ,'Age','Income'])
     
     prediction = model.predict(input_data)
     
